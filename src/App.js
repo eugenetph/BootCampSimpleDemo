@@ -1,12 +1,15 @@
 import React, { Fragment } from 'react';
 import './App.css';
 
+import FishSoup from './asset/Han-Kee-Fish-Soup-2.jpg'
+
 //Building Component
 const Building = () => {
   const grabFood = {
     foodName: "Fish Soup + Rice",
     cost: '$7.50',
-    recipientName: "Eugene Tan"
+    recipientName: "Eugene Tan",
+    img: FishSoup
   };
   return <Floor1 grabFood={grabFood} />;
 };
@@ -23,14 +26,14 @@ const Floor2 = ({ grabFood }) => {
 
 //Floor3 Component
 const Floor3 = ({ grabFood }) => {
-  return <Floor7 grabFood={grabFood} />;
+  return <Floor12 grabFood={grabFood} />;
 };
 
 //Floor 7 Component
-const Floor7 = ({ grabFood }) => {
+const Floor12 = ({ grabFood }) => {
   return (
     <Fragment>
-      <h3>Welcome to Floor 7</h3>
+      <h3>Welcome to my house at floor 12</h3>
       <p>
         <strong>Food Name: </strong>
         {grabFood.foodName}
@@ -43,6 +46,7 @@ const Floor7 = ({ grabFood }) => {
         <strong>Package: </strong>
         {grabFood.cost}
       </p>
+      <img src={grabFood.img} alt='fish soup'/>
     </Fragment>
   );
 };
