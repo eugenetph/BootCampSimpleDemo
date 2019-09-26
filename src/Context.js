@@ -5,7 +5,7 @@ import FishSoup from './asset/Han-Kee-Fish-Soup-2.jpg'
 const FoodContext = React.createContext()
 
 export const Provider = (props) => {
-    const grabFood = {
+    const order = {
         foodName: "Fish Soup + Rice ",
         cost: '$7.50',
         recipientName: "Eugene Tan",
@@ -13,7 +13,7 @@ export const Provider = (props) => {
         isPaid: false
       };
 
-    const [state, setState] = useState(grabFood)
+    const [state, setState] = useState(order)
 
     return (
         <FoodContext.Provider value={{ state, setState }}>
