@@ -54,7 +54,7 @@ const Floor12 = ({ grabFood }) => {
 function App() {
   return (
     <div className="App">
-      <h1>Simple Context API Demo using Hook(useState)</h1>
+      <h1>Simple Context API Demo using React Hooks</h1>
       <Building />
     </div>
   );
